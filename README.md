@@ -28,7 +28,7 @@ Read the Prime JSON data from a file and display it as CSV. --device-attributes 
 
 Create a RANCID router.db file from the Prime inventory
 
-	foo@bar:~/cipicmd$ ./cipicmd.py --input inventory.json --device-attributes deviceType,ipAddress | grep Catalyst | awk -F ',' '{print $2":cisco:up"}'
+	foo@bar:~/cipicmd$ ./cipicmd.py --input inventory.json --device-attributes deviceType,ipAddress --no-csv-header | grep Catalyst | awk -F ',' '{print $2":cisco:up"}'
 	192.0.2.50:cisco:up
 	192.0.2.51:cisco:up
 	192.0.2.52:cisco:up
