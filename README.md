@@ -1,6 +1,6 @@
 # CiPiCmd is a script for extracting data from Cisco Prime Infrastructure via its HTTP REST API
 
-* It has almost not error checks at the moment!
+* It has almost no error checks at the moment!
 * Please have a look at the usage examples until I've implemented error messagages and proper sanity checks in the code ;-)
 * SECURITY Please clear your shell history after using this tool, because you'll have to specifiy the password as parameter atm
 * SECURITY Python doesn't verify certifications on HTTPS connections by default! TODO
