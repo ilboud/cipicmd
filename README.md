@@ -41,4 +41,4 @@ Bug reports, patches and ideas are welcome.
 
 Please also let me know if I need to add any Trademark, Copyright foo before suing me. That would be nice :D
 
-Just send me an e-mail (jochenbartl@mailbox.org) or open a issue on GitHub
+Just send me an e-mail (jochenbartl@mailbox.org) or open an issue on GitHub
