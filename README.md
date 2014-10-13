@@ -1,7 +1,8 @@
-# CiPiCmd is a script for extracting data from Cisco Prime Infrastructure via its HTTP REST API
+# CiPiCmd - Cisco Prime Infrastructure Command Line script
 
-* It has almost no error checks at the moment!
-* Please have a look at the usage examples until I've implemented error messagages and proper sanity checks in the code ;-)
+Script for extracting data from Cisco Prime Infrastructure via its HTTP REST API
+
+* Please have a look at the usage examples until I've implemented better error messagages in code ;-)
 * SECURITY Please clear your shell history after using this tool, because you'll have to specifiy the password as parameter atm
 * SECURITY Python doesn't verify certificates on HTTPS connections by default! TODO
 * You could also just use reports in Prime instead of this script, if you just want to have the inventory as CSV
