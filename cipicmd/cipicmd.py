@@ -244,7 +244,7 @@ def arg_check_deviceattrs(attributes):
         return attributes
 
 
-if __name__ == '__main__':
+def main():
     argparser = ArgumentParser(description='Cisco Prime Infrastructure cli tool')
     # TODO epilog="Usage examples" ??
     argparser.add_argument('-V', '--version', action='version', version="%(prog)s " + __VERSION__)
@@ -317,3 +317,6 @@ if __name__ == '__main__':
     # TODO Return helath status by default if no parameters except host, user, pass are specified
 
     sys.exit(0)
+
+if __name__ == '__main__':
+    main()
