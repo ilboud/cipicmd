@@ -23,7 +23,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #
-# Tested with Prime 2.1
+# Tested with Prime 2.2
 
 import sys
 import json
@@ -36,7 +36,7 @@ import socket
 from argparse import ArgumentParser, ArgumentTypeError
 
 
-__VERSION__ = "0"
+__VERSION__ = "0.1.1"
 
 # TODO Replace custom error messages with logging module
 class CiPiConnection(object):
@@ -97,7 +97,7 @@ class CiPiConnection(object):
 
         parameters['.maxResults'] = str(maxresults)
 
-        jsondata = conn._httpconn_get_request('/webacs/api/v1/data/Devices', parameters)
+        jsondata = self._httpconn_get_request('/webacs/api/v1/data/Devices', parameters)
 
         return jsondata
 
