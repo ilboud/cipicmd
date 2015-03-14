@@ -1,4 +1,5 @@
-# CiPiCmd - Cisco Prime Infrastructure Command Line script
+CiPiCmd - Cisco Prime Infrastructure Command Line script
+========================================================
 
 Script for extracting data from Cisco Prime Infrastructure via its HTTP REST API
 
@@ -7,16 +8,21 @@ Script for extracting data from Cisco Prime Infrastructure via its HTTP REST API
 * SECURITY Python doesn't verify certificates on HTTPS connections by default! TODO
 * You could also just use reports in Prime instead of this script, if you just want to have the inventory as CSV
 * Tested with Python 2.7, but should work with 3.4 as well
+* Tested with Prime Infrastructure 2.1 and 2.2
 
-
-## Usage Examplse
+Usage Examplse
+--------------
 
 Get the inventory from Prime and return it on the command line as JSON output
 
-	./cipicmd.py --host 192.0.2.100 --username monitoring --password SuperSecret123 --dump
+::
+
+        ./cipicmd.py --host 192.0.2.100 --username monitoring --password SuperSecret123 --dump
 	
 
 Read the Prime JSON data from a file and display it as CSV. --device-attributes is mandatory at the moment and specifies which attributes are shown in the output.
+
+::
 
 	foo@bar:~/cipicmd$ ./cipicmd.py --input inventory.json --device-attributes deviceType,managementStatus
 	deviceType,managementStatus
@@ -29,14 +35,21 @@ Read the Prime JSON data from a file and display it as CSV. --device-attributes 
 
 Create a RANCID router.db file from the Prime inventory
 
+::
+
 	foo@bar:~/cipicmd$ ./cipicmd.py --input inventory.json --device-attributes deviceType,ipAddress --no-csv-header | grep Catalyst | awk -F ',' '{print $2":cisco:up"}'
 	192.0.2.50:cisco:up
 	192.0.2.51:cisco:up
 	192.0.2.52:cisco:up
 	192.0.2.53:cisco:up
 
+License
+-------
 
-## Feedback
+GPLv3
+
+Feedback
+--------
 
 Bug reports, patches and ideas are welcome.
 
